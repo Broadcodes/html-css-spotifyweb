@@ -10,36 +10,48 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
         integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <main class="flex">
+        <!-- MAIN: Area della Aside: contiene tutti i collegamenti a sinistra dello schermo -->
+        <!-- La viewport orizzontale è stata divisa in 2 parti con flex
+             creando quindi la zona destinata all'aside e la zona principale
+             in cui sono presenti gli album -->
         <div class="aside flex">
-            <img src="" alt="Spotify - Logo">
+            <a href="index.html"><img id="logo" src="img/logo.svg" alt="Spotify - Logo"></a>
             <ul>
-                <li>Home</li>
-                <li>Cerca</li>
-                <li>La tua libreria</li>
+                <li><a id="active" href="#"><img src="img/home.svg" alt="Home">Home</a></li>
+                <li><a href="#"><img src="img/search.svg" alt="Cerca">Cerca</a></li>
+                <li><a href="#"><img src="img/libreria.svg" alt="Libreria">La tua libreria</a></li>
             </ul>
             <h3>PLAYLIST</h3>
             <ul>
-                <li>Crea Playlist</li>
-                <li>Nome Playlist</li>
-                <li>Nome Playlist</li>
-                <li>Nome Playlist</li>
-                <li>Nome Playlist</li>
-                <li>Nome Playlist</li>
-                <li>Nome Playlist</li>
-                <li>Nome Playlist</li>
-                
+                <li><a href="#"><span><i class="fa-solid fa-plus"></i></span></i>Crea Playlist</a></li>
+                <li class="margin-TopBot-10"><a href="#">Nome Playlist</a></li>
+                <li class="margin-TopBot-10"><a href="#">Nome Playlist</a></li>
+                <li class="margin-TopBot-10"><a href="#">Nome Playlist</a></li>
+                <li class="margin-TopBot-10"><a href="#">Nome Playlist</a></li>
+                <li class="margin-TopBot-10"><a href="#">Nome Playlist</a></li>
+                <li class="margin-TopBot-10"><a href="#">Nome Playlist</a></li>
+                <li class="margin-TopBot-10"><a href="#">Nome Playlist</a></li>
+
             </ul>
         </div>
+
         <div class="mainContent">
+            <!-- La schermata principale viene divisa in 3 parti:
+                 - L'header in cui è presente il pulsante update;
+                 - La navigation bar per visualizzare gli album in modo differente (vedi la list in ul);
+                 - L'area principale in cui vengono mostrati gli album -->
             <header>
                 <div class="areaUpdate"></div>
-                <div class="areaAlbumPage flex">
+                <div class="nav-bar flex">
                     <ul class="flex">
                         <li>IN EVIDENZA</li>
                         <li>PODCAST</li>
@@ -49,10 +61,12 @@
                         <li>SCOPRI</li>
                     </ul>
                 </div>
+                <div class="areaAlbumPage"></div>
             </header>
         </div>
     </main>
 
+    <!-- FOOTER: Area in cui sono presenti i controller per la riproduzione brano, volume e schermo -->
     <footer class="flex">
         <div class="songInPlayed flex"></div>
         <div class="controlTrackPlayed flex">

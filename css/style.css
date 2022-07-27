@@ -7,7 +7,7 @@
 }
 
 body {
-    font-family: sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* --------------- GENERIC CLASSES ---------------*/
@@ -16,19 +16,83 @@ body {
     display: flex;
 }
 
+.margin-TopBot-10{
+    margin: 10px 0;
+}
+
 /* ---------------------------------------------- */
 
 main {
-    /*altezza intero dello schermo - altezza del footer*/
+    /*altezza intero dello schermo meno altezza del footer*/
     height: calc(100vh - 95px);
+}
+
+/* Aside class */
+#active{
+    color: #fff;
 }
 
 .aside {
     flex-basis: 250px;
     flex-direction: column;
     background-color: #000;
-    color: #696969;
+    padding: 5px 11px;
 }
+
+#logo {
+    width: 70%;
+    padding: 20px 0;
+}
+
+.aside ul li img{
+    width: 30px;
+    margin-right: 5px;
+    color: #a3a3a3;
+}
+
+.aside ul li{
+    list-style-type: none;
+    padding: 5px 0;
+}
+
+.aside ul li a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #a3a3a3;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.aside ul li a span{
+    width: 40px;
+    height: 40px;
+    background-color: #a3a3a3;
+    text-align: center;
+    margin-right: 10px;
+}
+
+
+.aside ul li i{
+    color: #000;
+    font-size: 1.5rem;
+    vertical-align: middle;
+    line-height: 40px;
+}
+
+.aside h3{
+    padding: 20px 0 5px;
+    font-size: 0.9rem;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
 
 .mainContent {
     flex-grow: 1;
@@ -40,12 +104,12 @@ main {
     height: 95px;
 }
 
-.areaAlbumPage{
+.nav-bar{
     height: 60px;
     justify-content: center;
     align-items: center;
     border: 1px dotted red;
-    color: #696969;
+    color: #a3a3a3;
 }
 
 
