@@ -138,14 +138,13 @@ main {
     position: absolute;
     bottom: 15px;
     left: 45px;
-    height: 2px;
     width: 30px;
+    height: 2px;
 }
 
 .nav-bar ul li {
     padding: 20px 13px;
 }
-
 
 
 
@@ -211,6 +210,43 @@ footer {
     /* border: 1px solid red; */
 }
 
-.barTrack {
-    background-color: rgb(45, 46, 14);
+.barTrack h3{
+    color: #fff;
+    font-size: 0.6rem;
+}
+
+
+.barTrackPlay{
+    position: relative;
+    width: 44%;
+    height: 4px;
+    margin: 0 25px;
+    border-radius: 50px;
+    background-color: #5a5a5a;
+}
+
+.barTrackPlayScroll{
+    content: "";
+    background: #c1c1c1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-radius: 50px;
+    animation-name: loading;
+    animation-duration: 275s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes loading {
+    0% {
+        transition: width;
+        width: 0%;
+    }
+
+    100% {
+        transition: width;
+        width: 100%;
+    }
 }
