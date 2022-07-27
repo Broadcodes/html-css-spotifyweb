@@ -68,11 +68,31 @@
 
     <!-- FOOTER: Area in cui sono presenti i controller per la riproduzione brano, volume e schermo -->
     <footer class="flex">
+        <!-- Area in cui è presente il logo dell'album in riproduzione -->
         <div class="songInPlayed flex"></div>
+
+        <!-- Area in cui è presente la barra centrale per
+             controllare il punto di ascolto della traccia
+             in riproduzione -->
         <div class="controlTrackPlayed flex">
-            <div class="controlTrack"></div>
+            <!-- Barra superiore in cui sono presenti i controlli come play e pausa -->
+            <div class="controlTrack">
+                <ul class="flex">
+                    <li><button><i class="fa-solid fa-shuffle"></i></button></li>
+                    <li><button><i class="fa-solid fa-backward-step"></i></button></li>
+                    <li><button><i id="play" class="fa-regular fa-circle-play"></i></button></li>
+                    <li><button><i class="fa-solid fa-forward-step"></i></button></li>
+                    <li><button><i class="fa-solid fa-rotate-right"></i></button></li>
+                </ul>
+            </div>
+            
+            <!-- Barra inferiore in cui è presente la barra
+                 di scorrimento della traccia in riproduzione -->
             <div class="barTrack"></div>
         </div>
+
+        <!-- Area in cui è presente il controllo del volume,
+             ingrandimento schermo, ecc -->
         <div class="controlHardware flex"></div>
     </footer>
 </body>

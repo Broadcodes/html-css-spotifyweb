@@ -50,8 +50,13 @@ main {
     color: #a3a3a3;
 }
 
-.aside ul li {
+.aside ul li,
+.nav-bar ul li,
+.controlTrack ul li{
     list-style-type: none;
+}
+
+.aside ul li {
     padding: 5px 0;
 }
 
@@ -114,7 +119,6 @@ main {
 
 /* Navigation bar */
 .nav-bar {
-    /* height: 60px; */
     justify-content: center;
     align-items: center;
     color: #a3a3a3;
@@ -139,7 +143,6 @@ main {
 }
 
 .nav-bar ul li {
-    list-style-type: none;
     padding: 20px 13px;
 }
 
@@ -187,9 +190,25 @@ footer {
     align-items: center;
 }
 
+.controlTrack ul li{
+    align-self: center;
+} 
 
-.controlTrack {
-    background-color: rgb(16, 46, 14);
+.controlTrack ul li button {
+    background-color: #282828;
+    border: none;
+}
+
+.controlTrack ul li button i{
+    font-size: 1.1rem;
+    padding: 0 15px;
+    color: #fff;
+    cursor: pointer;
+}
+
+#play{
+    font-size: 1.8rem;
+    /* border: 1px solid red; */
 }
 
 .barTrack {
