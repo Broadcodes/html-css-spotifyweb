@@ -76,6 +76,11 @@ main {
     padding-bottom: 15px;
 }
 
+.aside ul:nth-of-type(3) li:nth-of-type(1):hover {
+    color: #fff;
+    cursor: pointer;
+}
+
 .aside ul:nth-of-type(3) li:nth-of-type(2) {
     padding-top: 15px;
     color: #fff;
@@ -117,6 +122,13 @@ main {
     color: #a3a3a3;
 }
 
+.aside ul li a:hover,
+.nav-bar ul li a:hover,
+.artistPlaying p a:hover,
+.songInPlayed button i:hover {
+    color: #fff;
+}
+
 .aside ul li a {
     display: flex;
     align-items: center;
@@ -129,7 +141,6 @@ main {
     text-align: center;
     margin-right: 10px;
 }
-
 
 .aside ul li i {
     color: #000;
@@ -150,11 +161,25 @@ main {
     flex-grow: 1;
     background-color: #141922;
     overflow-y: scroll;
+    scrollbar-color: #fff #fff;
+    scrollbar-width: thin;
+}
+
+.mainContent::-webkit-scrollbar-thumb {
+    background: #979797;
+    border-radius: 50px;
+}
+
+/* For Chrome and other browsers except Firefox */
+::-webkit-scrollbar {
+ width: 10px;
+ background: #fff;
 }
 
 header {
     width: calc(100% - 250px);
     position: fixed;
+    z-index: 20;
 }
 
 .headerContainer {
@@ -165,7 +190,7 @@ header {
     left: 0;
     z-index: -1;
     background: rgb(20,25,34);
-background: linear-gradient(180deg, rgba(20,25,34,1) 85%, rgba(20,25,34,0) 100%);
+    background: linear-gradient(180deg, rgba(20,25,34,1) 85%, rgba(20,25,34,0) 100%);
 }
 
 /* Area pulsante Upgrade */
@@ -184,8 +209,12 @@ background: linear-gradient(180deg, rgba(20,25,34,1) 85%, rgba(20,25,34,0) 100%)
     font-weight: 600;
     border: 2px solid #fff;
     padding: 12px 40px;
-    margin-right: 25px;
+    margin-right: 18px;
     border-radius: 50px;
+}
+
+.areaUpdate a:hover {
+    transform: scale(1.1);
 }
 
 /* Navigation bar */
@@ -269,11 +298,35 @@ background: linear-gradient(180deg, rgba(20,25,34,1) 85%, rgba(20,25,34,0) 100%)
 .album ul li {
     width: calc(((100vw - 250px) - 150px) / 6);
     margin: 0 8px;
+    position: relative;
 }
 
+.imageContainer,
+.imageInHover,
 .album ul li img {
     width: 100%;
     height: calc(((100vw - 250px) - 150px) / 6);
+}
+
+.imageInHover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    visibility: hidden;
+}
+
+.imageInHover i{
+    color: #fff;
+    font-size: 4rem;
+    visibility: hidden;
+}
+
+.album ul li .imageContainer:hover .imageInHover,
+.album ul li .imageContainer:hover .imageInHover i{
+    visibility: visible;
 }
 
 /* FOOTER */
@@ -323,10 +376,11 @@ footer {
     color: #fff;
 }
 
-.artistPlaying p {
+.artistPlaying p a {
     font-size: 0.7rem;
     font-weight: 600;
     color: #7d7d7d;
+    text-decoration: none;
 }
 
 .songInPlayed button {
@@ -342,6 +396,10 @@ footer {
 .songInPlayed button i {
     font-size: 1.1rem;
     color: #a3a3a3;
+}
+
+.artistPlaying p a:hover{
+    text-decoration: underline;
 }
 
 /* Area dedicata ai controlli della traccia audio */
@@ -369,6 +427,10 @@ footer {
 
 #play {
     font-size: 1.8rem;
+}
+
+#play:hover {
+    transform: scale(1.1);
 }
 
 /* Area dedicata alla barra scorrimento traccia audio */
@@ -512,3 +574,4 @@ footer {
 .controlAudio:hover .controlAudioBarScroll {
     background-color: greenyellow;
 }
+
