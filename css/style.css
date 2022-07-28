@@ -250,6 +250,45 @@ footer {
     justify-content: center;
 }
 
+/* Area dedicata alla sezione in cui viene mostrato l'album in riproduzione */
+.songInPlayed img{
+    width: 45px;
+}
+
+.artistPlaying{
+    margin-left: -20px;
+}
+
+.artistPlaying h3{
+    font-size: 0.8rem;
+    color: #fff;
+}
+
+.artistPlaying p{
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #7d7d7d;
+}
+
+.songInPlayed button{
+    background-color: #282828;
+    border: none;
+}
+
+.songInPlayed button:nth-of-type(1){
+    margin-right: -15px;
+}
+
+.songInPlayed button i{
+    font-size: 1.1rem;
+    color: #a3a3a3;
+ }
+
+
+
+
+
+/* Area dedicata alla barra scorrimento traccia audio */
 .controlTrack{
     align-items: center;
     padding-top: 10px;
@@ -273,7 +312,6 @@ footer {
 
 #play{
     font-size: 1.8rem;
-    /* border: 1px solid red; */
 }
 
 .barTrack{
