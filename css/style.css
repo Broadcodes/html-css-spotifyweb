@@ -152,7 +152,7 @@ main {
     overflow-y: scroll;
 }
 
-header{
+header {
     width: calc(100% - 250px);
     position: fixed;
 }
@@ -206,73 +206,62 @@ header{
 }
 
 /* MAIN */
-.sectionViewAlbum{
-    margin-top: 155px;
+.sectionViewAlbum {
+    margin-top: 175px;
 }
 
-.areaRecentlyPlayed{
-    border: 1px solid red;
+.sectionViewAlbum h3,
+.sectionViewAlbum p {
+    text-align: center;
 }
 
+.sectionViewAlbum h2,
+.sectionViewAlbum h3,
+.sectionViewAlbum h4 {
+    color: #fff;
+}
+
+.sectionViewAlbum h2,
+.sectionViewAlbum h4 {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.sectionViewAlbum h3{
+    padding: 10px 0 0;
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+.sectionViewAlbum p,
+.sectionViewAlbum h4 {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #7d7d7d;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
 
 .album {
-    
-    width: calc((100vw - 280px));
+    width: calc((100vw - 250px) - 50px);
+    padding: 25px 0;
 }
 
 .album ul {
-    justify-content: center;
+    justify-content: start;
     list-style-type: none;
+    margin-left: 14px;
 }
 
 .album ul li {
-    border: 1px solid green;
-    width: calc((100vw - 280px) / 6);
-    height: calc((100vw - 280px) / 6);
-    margin: 0 5px;
+    width: calc(((100vw - 250px) - 150px) / 6);
+    margin: 0 8px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.album ul li img {
+    width: 100%;
+    height: calc(((100vw - 250px) - 150px) / 6);
+}
 
 /* FOOTER */
 footer {
