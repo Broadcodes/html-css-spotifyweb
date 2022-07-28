@@ -18,12 +18,15 @@ body {
     margin: 10px 0;
 }
 
+.circle {
+    border-radius: 50%;
+}
+
 /* ---------------------------------------------- */
 
 main {
     /*altezza intero dello schermo meno altezza del footer*/
     height: calc(100vh - 95px);
-    overflow-y: scroll;
 }
 
 /* Aside */
@@ -33,6 +36,7 @@ main {
 }
 
 .aside {
+    min-width: 250px;
     flex-basis: 250px;
     flex-direction: column;
     background-color: #000;
@@ -145,11 +149,17 @@ main {
 .mainContent {
     flex-grow: 1;
     background-color: #141922;
+    overflow-y: scroll;
+}
+
+header{
+    width: calc(100% - 250px);
+    position: fixed;
 }
 
 /* Area pulsante Upgrade */
 .areaUpdate {
-    background-color: #080b12;
+    background-color: rgba(8, 11, 18, 0.5);
     height: 95px;
     align-items: center;
     justify-content: end;
@@ -162,7 +172,7 @@ main {
     font-weight: 600;
     border: 2px solid #fff;
     padding: 12px 40px;
-    margin-right: 5px;
+    margin-right: 25px;
     border-radius: 50px;
 }
 
@@ -194,6 +204,65 @@ main {
 .nav-bar ul li {
     padding: 20px 13px;
 }
+
+/* MAIN */
+.sectionViewAlbum{
+    margin-top: 155px;
+}
+
+.areaRecentlyPlayed{
+    border: 1px solid red;
+}
+
+
+.album {
+    
+    width: calc((100vw - 280px));
+}
+
+.album ul {
+    justify-content: center;
+    list-style-type: none;
+}
+
+.album ul li {
+    border: 1px solid green;
+    width: calc((100vw - 280px) / 6);
+    height: calc((100vw - 280px) / 6);
+    margin: 0 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -410,7 +479,7 @@ footer {
     cursor: pointer;
 }
 
-.controlAudioBarScroll{
+.controlAudioBarScroll {
     content: "";
     background-color: #c1c1c1;
     position: absolute;
