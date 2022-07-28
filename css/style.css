@@ -96,7 +96,7 @@ main {
 
 .aside ul li,
 .nav-bar ul li,
-.controlTrack ul li{
+.controlTrack ul li {
     list-style-type: none;
 }
 
@@ -166,7 +166,7 @@ main {
     justify-content: end;
 }
 
-.areaUpdate a{
+.areaUpdate a {
     text-decoration: none;
     color: #fff;
     font-size: 0.85rem;
@@ -230,9 +230,11 @@ footer {
 .songInPlayed,
 .controlHardware {
     flex-basis: 250px;
-    background-color: rgb(46, 14, 14);
-    justify-content: space-around;
     align-items: center;
+}
+
+.songInPlayed {
+    justify-content: space-around;
 }
 
 .controlTrackPlayed {
@@ -251,81 +253,79 @@ footer {
 }
 
 /* Area dedicata alla sezione in cui viene mostrato l'album in riproduzione */
-.songInPlayed img{
+.songInPlayed img {
     width: 45px;
 }
 
-.artistPlaying{
+.artistPlaying {
     margin-left: -20px;
 }
 
-.artistPlaying h3{
+.artistPlaying h3 {
     font-size: 0.8rem;
     color: #fff;
 }
 
-.artistPlaying p{
+.artistPlaying p {
     font-size: 0.7rem;
     font-weight: 600;
     color: #7d7d7d;
 }
 
-.songInPlayed button{
+.songInPlayed button {
     background-color: #282828;
     border: none;
 }
 
-.songInPlayed button:nth-of-type(1){
+.songInPlayed button:nth-of-type(1) {
     margin-right: -15px;
 }
 
-.songInPlayed button i{
+.controlHardware ul li button i,
+.songInPlayed button i {
     font-size: 1.1rem;
     color: #a3a3a3;
- }
+}
 
-
-
-
-
-/* Area dedicata alla barra scorrimento traccia audio */
-.controlTrack{
+/* Area dedicata ai controlli della traccia audio */
+.controlTrack {
     align-items: center;
     padding-top: 10px;
 }
 
-.controlTrack ul li{
+.controlTrack ul li {
     align-self: center;
-} 
+}
 
+.controlHardware ul li button,
 .controlTrack ul li button {
     background-color: #282828;
     border: none;
 }
 
-.controlTrack ul li button i{
+.controlTrack ul li button i {
     font-size: 1.1rem;
     padding: 0 15px;
     color: #fff;
     cursor: pointer;
 }
 
-#play{
+#play {
     font-size: 1.8rem;
 }
 
-.barTrack{
-    align-items:flex-start;
+/* Area dedicata alla barra scorrimento traccia audio */
+.barTrack {
+    align-items: flex-start;
     padding-top: 13px;
 }
 
-.barTrack h3{
+.barTrack h3 {
     color: #fff;
     font-size: 0.6rem;
 }
 
-
-.barTrackPlay{
+.barTrackPlay {
     position: relative;
     width: 44%;
     height: 4px;
@@ -334,7 +334,7 @@ footer {
     background-color: #5a5a5a;
 }
 
-.barTrackPlayScroll{
+.barTrackPlayScroll {
     content: "";
     background-color: #c1c1c1;
     position: absolute;
@@ -348,7 +348,7 @@ footer {
     animation-timing-function: linear;
 }
 
-.barTrackPlayScrollCircle{
+.barTrackPlayScrollCircle {
     content: "";
     display: inline;
     width: 15px;
@@ -365,11 +365,11 @@ footer {
     opacity: 0;
 }
 
-.barTrackPlay:hover .barTrackPlayScrollCircle{
+.barTrackPlay:hover .barTrackPlayScrollCircle {
     opacity: 100%;
 }
 
-.barTrackPlay:hover .barTrackPlayScroll{
+.barTrackPlay:hover .barTrackPlayScroll {
     background-color: greenyellow;
 }
 
@@ -393,4 +393,65 @@ footer {
     100% {
         left: 100%;
     }
+}
+
+/* Area dedicata alla sezione in cui vengono mostrati i controlli
+   hardware come controllo volume o controllo display */
+.controlHardware {
+    justify-content: start;
+}
+
+.controlHardware ul {
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+}
+
+.controlHardware ul li button i {
+    margin: 0 9px;
+    color: rgb(235, 235, 235);
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+.controlAudio {
+    position: relative;
+    width: 120px;
+    margin: 0 15px;
+    height: 4px;
+    border-radius: 50px;
+    background-color: #5a5a5a;
+    cursor: pointer;
+}
+
+.controlAudioBarScroll{
+    content: "";
+    background-color: #c1c1c1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20%;
+    height: 100%;
+    border-radius: 50px;
+}
+
+.controlAudioBarScrollCircle {
+    content: "";
+    display: inline;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: -5px;
+    left: 13px;
+    background-color: #fff;
+    border-radius: 50px;
+    opacity: 0%;
+}
+
+.controlAudio:hover .controlAudioBarScrollCircle {
+    opacity: 100%;
+}
+
+.controlAudio:hover .controlAudioBarScroll {
+    background-color: greenyellow;
 }
