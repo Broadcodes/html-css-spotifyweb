@@ -1,5 +1,3 @@
-/* border: 1px solid red; */
-
 * {
     box-sizing: border-box;
     margin: 0px;
@@ -25,9 +23,10 @@ body {
 main {
     /*altezza intero dello schermo meno altezza del footer*/
     height: calc(100vh - 95px);
+    overflow-y: scroll;
 }
 
-/* Aside class */
+/* Aside */
 #active {
     margin-left: -2px;
     color: #fff;
@@ -50,9 +49,6 @@ main {
 .aside h3 {
     padding-left: 20px;
 }
-
-
-
 
 .aside ul li img {
     width: 27px;
@@ -145,20 +141,13 @@ main {
     color: #fff;
 }
 
-
-
-
-
-
-
-
-
+/* Area Main Content*/
 .mainContent {
     flex-grow: 1;
     background-color: #141922;
 }
 
-/* Area Button Upgrade */
+/* Area pulsante Upgrade */
 .areaUpdate {
     background-color: #080b12;
     height: 95px;
@@ -176,9 +165,6 @@ main {
     margin-right: 5px;
     border-radius: 50px;
 }
-
-
-
 
 /* Navigation bar */
 .nav-bar {
@@ -219,7 +205,7 @@ main {
 
 
 
-
+/* FOOTER */
 footer {
     background-color: #282828;
     width: 100%;
