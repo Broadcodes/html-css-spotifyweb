@@ -605,7 +605,7 @@ footer {
     header {
         width: calc(100% - 200px);
     }
-
+    
     .headerContainer {
         height: 195px;
     }
@@ -614,11 +614,11 @@ footer {
         font-size: 0.75rem;
         padding: 10px 35px;
     }
-
+    
     .album ul li {
         flex-basis: calc((100% - 200px) / 4);
     }
-
+    
     .imageContainer {
         width: calc((100vw - 200px) / 4 - 30px);
         height: calc((100vw - 200px) / 4 - 30px);
@@ -627,7 +627,7 @@ footer {
     .imageInHover{
         width: calc((100vw / 4) - 80px);
     }
-
+    
     .sectionViewAlbum{
         margin-top: 200px;
     }
@@ -653,7 +653,7 @@ footer {
     .artistPlaying {
         margin-left: -9px;
     }
-
+    
     .controlAudio {
         position: relative;
         width: 80px;
@@ -667,15 +667,24 @@ footer {
 /* ----------------------------------------------------------- */
 /* MOBILE S VERSION */
 @media screen and (max-width: 639px) {
+    .aside {
+        min-width: 34%;   
+        flex-basis: 34%;
+    }
+    
+    header {
+        width: calc((100% - 34%) - 15px);
+    }
+
     .areaUpdate a {
         font-size: 0.65rem;
         padding: 10px 25px;
     }
-
+    
     .album ul{
         margin: 0px;
     }
-
+    
     .album ul li {
         flex-basis: calc((100% - 200px) / 2);
     }
@@ -683,7 +692,7 @@ footer {
     .imageInHover{
         width: calc((100vw / 2) - 130px);
     }
-
+    
     .imageContainer {
         width: calc((100vw - 200px) / 2 - 30px);
         height: calc((100vw - 200px) / 2 - 30px);
@@ -705,4 +714,5 @@ footer {
 }
 
 /* MOBILE XS VERSION */
-@media screen and (max-width: 320px) {}
+@media screen and (max-width: 552px) {
+}
