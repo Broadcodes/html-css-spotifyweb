@@ -22,6 +22,88 @@ body {
     border-radius: 50%;
 }
 
+/* --------------- MORE CLASSES ---------------*/
+
+.aside a,
+.aside ul li a,
+.aside h3 {
+    padding-left: 20px;
+}
+
+.aside ul li,
+.nav-bar ul li,
+.controlTrack ul li {
+    list-style-type: none;
+}
+
+.aside ul li,
+.aside ul li a,
+.nav-bar ul li a {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: #a3a3a3;
+}
+
+.aside ul li a:hover,
+.nav-bar ul li a:hover,
+.artistPlaying p a:hover,
+.songInPlayed button i:hover {
+    color: #fff;
+}
+
+.sectionViewAlbum h3,
+.sectionViewAlbum p {
+    text-align: center;
+}
+
+.sectionViewAlbum h2,
+.sectionViewAlbum h3,
+.sectionViewAlbum h4 {
+    color: #fff;
+}
+
+.sectionViewAlbum h2,
+.sectionViewAlbum h4 {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.sectionViewAlbum p,
+.sectionViewAlbum h4 {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #7d7d7d;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.imageContainer,
+.imageInHover,
+.album ul li img {
+    width: 100%;
+    min-height: 140px;
+}
+
+.album ul li .imageContainer:hover .imageInHover,
+.album ul li .imageContainer:hover .imageInHover i {
+    visibility: visible;
+}
+
+.songInPlayed,
+.controlHardware {
+    flex-basis: 250px;
+    align-items: center;
+}
+
+.controlTrack,
+.barTrack {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 /* ---------------------------------------------- */
 
 main {
@@ -46,12 +128,6 @@ main {
 #logo {
     width: 60%;
     padding: 10px 0 20px;
-}
-
-.aside a,
-.aside ul li a,
-.aside h3 {
-    padding-left: 20px;
 }
 
 .aside ul li img {
@@ -99,34 +175,12 @@ main {
     background-color: #737373;
 }
 
-.aside ul li,
-.nav-bar ul li,
-.controlTrack ul li {
-    list-style-type: none;
-}
-
 .aside ul li {
     padding: 3px 0;
 }
 
 .aside ul:nth-of-type(1) li:nth-of-type(1) {
     border-left: 2px solid greenyellow;
-}
-
-.aside ul li,
-.aside ul li a,
-.nav-bar ul li a {
-    font-size: 0.8rem;
-    font-weight: 600;
-    text-decoration: none;
-    color: #a3a3a3;
-}
-
-.aside ul li a:hover,
-.nav-bar ul li a:hover,
-.artistPlaying p a:hover,
-.songInPlayed button i:hover {
-    color: #fff;
 }
 
 .aside ul li a {
@@ -170,10 +224,9 @@ main {
     border-radius: 50px;
 }
 
-/* For Chrome and other browsers except Firefox */
 ::-webkit-scrollbar {
- width: 10px;
- background: #fff;
+    width: 10px;
+    background: #fff;
 }
 
 header {
@@ -189,8 +242,8 @@ header {
     top: 0;
     left: 0;
     z-index: -1;
-    background: rgb(20,25,34);
-    background: linear-gradient(180deg, rgba(20,25,34,1) 85%, rgba(20,25,34,0) 100%);
+    background: rgb(20, 25, 34);
+    background: linear-gradient(180deg, rgba(20, 25, 34, 1) 85%, rgba(20, 25, 34, 0) 100%);
 }
 
 /* Area pulsante Upgrade */
@@ -252,63 +305,34 @@ header {
     margin-top: 175px;
 }
 
-.sectionViewAlbum h3,
-.sectionViewAlbum p {
-    text-align: center;
-}
-
-.sectionViewAlbum h2,
-.sectionViewAlbum h3,
-.sectionViewAlbum h4 {
-    color: #fff;
-}
-
-.sectionViewAlbum h2,
-.sectionViewAlbum h4 {
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
 .sectionViewAlbum h3 {
     padding: 10px 0 0;
     font-size: 1.05rem;
     font-weight: 600;
 }
 
-.sectionViewAlbum p,
-.sectionViewAlbum h4 {
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: #7d7d7d;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
 .album {
-    width: calc((100vw - 250px) - 50px);
+    flex-wrap: wrap;
     padding: 25px 0;
 }
 
 .album ul {
-    justify-content: start;
+    width: 100%;
     list-style-type: none;
-    margin-left: 14px;
+    flex-wrap: wrap;
+    margin: 0 10px;
 }
 
 .album ul li {
-    width: calc(((100vw - 250px) - 150px) / 6);
+    width: calc(100% / 6 - 20px);
+    min-width: 140px;
+    flex-wrap: wrap;
     margin: 0 8px;
     position: relative;
+
 }
 
-.imageContainer,
-.imageInHover,
-.album ul li img {
-    width: 100%;
-    height: calc(((100vw - 250px) - 150px) / 6);
-}
-
-.imageInHover{
+.imageInHover {
     position: absolute;
     top: 0;
     left: 0;
@@ -318,15 +342,10 @@ header {
     visibility: hidden;
 }
 
-.imageInHover i{
+.imageInHover i {
     color: #fff;
     font-size: 4rem;
     visibility: hidden;
-}
-
-.album ul li .imageContainer:hover .imageInHover,
-.album ul li .imageContainer:hover .imageInHover i{
-    visibility: visible;
 }
 
 /* FOOTER */
@@ -335,12 +354,6 @@ footer {
     width: 100%;
     height: 95px;
     justify-content: space-between;
-}
-
-.songInPlayed,
-.controlHardware {
-    flex-basis: 250px;
-    align-items: center;
 }
 
 .songInPlayed {
@@ -352,14 +365,6 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.controlTrack,
-.barTrack {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
 }
 
 /* Area dedicata alla sezione in cui viene mostrato l'album in riproduzione */
@@ -392,13 +397,12 @@ footer {
     margin-right: -15px;
 }
 
-.controlHardware ul li button i,
 .songInPlayed button i {
     font-size: 1.1rem;
     color: #a3a3a3;
 }
 
-.artistPlaying p a:hover{
+.artistPlaying p a:hover {
     text-decoration: underline;
 }
 
@@ -575,3 +579,13 @@ footer {
     background-color: greenyellow;
 }
 
+/* --------------------------------------------------------------------------- */
+
+/* TABLET MD VERSION */
+@media screen and (max-width: 760px) {}
+
+/* MOBILE S VERSION */
+@media screen and (max-width: 480px) {}
+
+/* MOBILE XS VERSION */
+@media screen and (max-width: 320px) {}
