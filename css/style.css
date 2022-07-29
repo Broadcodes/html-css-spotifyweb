@@ -79,9 +79,7 @@ body {
 }
 
 .imageContainer,
-.imageInHover,
 .album ul li img {
-    width: 100%;
     min-height: 140px;
 }
 
@@ -118,6 +116,7 @@ main {
 }
 
 .aside {
+    z-index: -1;
     min-width: 250px;
     flex-basis: 250px;
     flex-direction: column;
@@ -217,6 +216,7 @@ main {
     overflow-y: scroll;
     scrollbar-color: #fff #fff;
     scrollbar-width: thin;
+    z-index: -1;
 }
 
 .mainContent::-webkit-scrollbar-thumb {
@@ -232,7 +232,7 @@ main {
 header {
     width: calc(100% - 250px);
     position: fixed;
-    z-index: 20;
+    z-index: 10;
 }
 
 .headerContainer {
@@ -324,20 +324,30 @@ header {
 }
 
 .album ul li {
-    width: calc(100% / 6 - 20px);
+    width: calc((100vw - 250px) / 6 - 30px);
     min-width: 140px;
     flex-wrap: wrap;
     margin: 0 8px;
-    position: relative;
+}
 
+.imageContainer{
+    width: calc((100vw - 250px) / 6 - 30px);
+    height: calc((100vw - 250px) / 6 - 30px);
+    position: relative;
+}
+
+.album ul li img {
+    height: 100%;
 }
 
 .imageInHover {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
     top: 0;
     left: 0;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.5);
     align-items: center;
     visibility: hidden;
 }
