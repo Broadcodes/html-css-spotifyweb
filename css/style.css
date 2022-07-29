@@ -71,16 +71,11 @@ body {
 
 .sectionViewAlbum p,
 .sectionViewAlbum h4 {
-    font-size: 0.8rem;
+    font-size: 60%;
     font-weight: 600;
     color: #7d7d7d;
     padding-top: 10px;
     padding-bottom: 10px;
-}
-
-.imageContainer,
-.album ul li img {
-    min-height: 140px;
 }
 
 .album ul li .imageContainer:hover .imageInHover,
@@ -116,7 +111,6 @@ main {
 }
 
 .aside {
-    z-index: -1;
     min-width: 250px;
     flex-basis: 250px;
     flex-direction: column;
@@ -216,7 +210,6 @@ main {
     overflow-y: scroll;
     scrollbar-color: #fff #fff;
     scrollbar-width: thin;
-    z-index: -1;
 }
 
 .mainContent::-webkit-scrollbar-thumb {
@@ -230,24 +223,26 @@ main {
 }
 
 header {
+    z-index: 1;
     width: calc(100% - 250px);
     position: fixed;
-    z-index: 10;
 }
 
 .headerContainer {
-    width: calc(100vw - 250px - 20px);
-    height: 170px;
+    z-index: 2;
+    width: calc(100% - 15px);
+    height: 190px;
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -1;
     background: rgb(20, 25, 34);
     background: linear-gradient(180deg, rgba(20, 25, 34, 1) 85%, rgba(20, 25, 34, 0) 100%);
 }
 
 /* Area pulsante Upgrade */
 .areaUpdate {
+    position: relative;
+    z-index: 3;
     background-color: rgba(8, 11, 18, 0.5);
     width: 100%;
     height: 95px;
@@ -256,6 +251,7 @@ header {
 }
 
 .areaUpdate a {
+    z-index: 3;
     text-decoration: none;
     color: #fff;
     font-size: 0.85rem;
@@ -273,9 +269,16 @@ header {
 /* Navigation bar */
 .nav-bar {
     width: 100%;
+    padding: 10px 0;
     justify-content: center;
     align-items: center;
     color: #a3a3a3;
+}
+
+.nav-bar ul {
+    z-index: 3;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 /*  Per creare la barra sotto al testo, ho importato il
@@ -290,14 +293,14 @@ header {
     content: "";
     background: greenyellow;
     position: absolute;
-    bottom: 15px;
+    bottom: 0px;
     left: 45px;
     width: 30px;
     height: 2px;
 }
 
 .nav-bar ul li {
-    padding: 20px 13px;
+    padding: 5px 13px;
 }
 
 /* MAIN */
@@ -307,7 +310,7 @@ header {
 
 .sectionViewAlbum h3 {
     padding: 10px 0 0;
-    font-size: 1.05rem;
+    font-size: 70%;
     font-weight: 600;
 }
 
@@ -324,14 +327,13 @@ header {
 }
 
 .album ul li {
-    width: calc((100vw - 250px) / 6 - 30px);
-    min-width: 140px;
+    flex-basis: calc((100% - 250px) / 6);
     flex-wrap: wrap;
     margin: 0 8px;
 }
 
-.imageContainer{
-    width: calc((100vw - 250px) / 6 - 30px);
+.imageContainer {
+    width: calc((100vw - 250px) / 6 - 30p);
     height: calc((100vw - 250px) / 6 - 30px);
     position: relative;
 }
@@ -341,7 +343,7 @@ header {
 }
 
 .imageInHover {
-    width: 100%;
+    width: calc((100vw / 6) - 71px);
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
@@ -354,7 +356,7 @@ header {
 
 .imageInHover i {
     color: #fff;
-    font-size: 4rem;
+    font-size: 4vw;
     visibility: hidden;
 }
 
@@ -364,6 +366,8 @@ footer {
     width: 100%;
     height: 95px;
     justify-content: space-between;
+    z-index: 1;
+    position: relative;
 }
 
 .songInPlayed {
@@ -592,10 +596,69 @@ footer {
 /* --------------------------------------------------------------------------- */
 
 /* TABLET MD VERSION */
-@media screen and (max-width: 760px) {}
+@media screen and (max-width: 876px) {
+    .aside {
+        min-width: 200px;   
+        flex-basis: 200px;
+    }
+
+    header {
+        width: calc(100% - 200px);
+    }
+
+    .headerContainer {
+        height: 195px;
+    }
+
+    .areaUpdate a {
+        font-size: 0.75rem;
+        padding: 10px 35px;
+    }
+
+    .imageContainer {
+        width: calc((100vw - 200px) / 4 - 30px);
+        height: calc((100vw - 200px) / 4 - 30px);
+    }
+
+    .sectionViewAlbum{
+        margin-top: 200px;
+    }
+    
+    .sectionViewAlbum h2{
+        font-size: 1.1em;
+    }
+
+    .sectionViewAlbum p,
+    .sectionViewAlbum h4 {
+        font-size: 0.7rem;  /**/
+    }
+
+    .songInPlayed,
+    .controlHardware {
+        flex-basis: 200px;  /**/
+    }
+
+    .songInPlayed button:nth-of-type(1) {
+        margin-right: -10px;  /**/
+    }
+
+    .artistPlaying {
+        margin-left: -9px;  /**/
+    }
+
+    .controlAudio {
+        position: relative;
+        width: 80px;  /**/
+        margin: 0 13px;  /**/
+    }
+
+    .controlHardware ul li button i {
+        font-size: 0.75rem;  /**/
+    }
+}
 
 /* MOBILE S VERSION */
-@media screen and (max-width: 480px) {}
+@media screen and (max-width: 639px) {}
 
 /* MOBILE XS VERSION */
 @media screen and (max-width: 320px) {}
