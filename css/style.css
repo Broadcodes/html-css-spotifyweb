@@ -624,6 +624,10 @@ footer {
         height: calc((100vw - 200px) / 4 - 30px);
     }
 
+    .imageInHover{
+        width: calc((100vw / 4) - 80px);
+    }
+
     .sectionViewAlbum{
         margin-top: 200px;
     }
@@ -674,6 +678,10 @@ footer {
 
     .album ul li {
         flex-basis: calc((100% - 200px) / 2);
+    }
+
+    .imageInHover{
+        width: calc((100vw / 2) - 130px);
     }
 
     .imageContainer {
