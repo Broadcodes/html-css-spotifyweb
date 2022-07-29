@@ -627,6 +627,10 @@ footer {
     .imageInHover{
         width: calc((100vw / 4) - 80px);
     }
+
+    .imageInHover i {
+        font-size: 6vw;
+    }
     
     .sectionViewAlbum{
         margin-top: 200px;
@@ -667,9 +671,17 @@ footer {
 /* ----------------------------------------------------------- */
 /* MOBILE S VERSION */
 @media screen and (max-width: 639px) {
+    main {
+        height: calc(100vh - 70px);
+    }
+
     .aside {
         min-width: 34%;   
         flex-basis: 34%;
+    }
+
+    .aside ul:nth-of-type(3) {
+        bottom: -70px;
     }
     
     header {
@@ -692,27 +704,77 @@ footer {
     .imageInHover{
         width: calc((100vw / 2) - 130px);
     }
+
+    .imageInHover i {
+        font-size: 9vw;
+    }
     
     .imageContainer {
-        width: calc((100vw - 200px) / 2 - 30px);
-        height: calc((100vw - 200px) / 2 - 30px);
+        width: calc((100vw - 200px) / 2 - 35px);
+        height: calc((100vw - 200px) / 2 - 35px);
     }
 
-    .songInPlayed button:nth-of-type(1),
-    .songInPlayed button:nth-of-type(2) {
-        margin-right: -5px;
+    footer{
+        height: 70px;
     }
 
-    .controlHardware ul li button i {
-        font-size: 0.65rem;
-        margin: 0 4px;
+    .controlTrack ul li button i{
+        font-size: 0.9rem;
+        padding: 0 12px;
+    }
+
+    #play{
+        font-size: 1.4rem;
+    }
+
+    .artistPlaying {
+        margin-left: 0px;
+    }
+    
+    .controlAudio {
+        position: relative;
+        width: 10vw;
+        margin: 0 13px;
     }
 
     .controlHardware {
-        justify-content: center;
+        justify-content: end;
     }
+
+    .controlHardware ul li button i {
+        font-size: 0.75rem;
+        margin: 0 5px;
+    }        
+    
+    .songInPlayed {
+        min-width: 200px;
+    }
+
+    .songInPlayed button:nth-of-type(1),
+    .songInPlayed button:nth-of-type(2){
+        position: relative;
+        margin-right: -10px;
+    }
+
+    .songInPlayed button:nth-of-type(1) {
+        top: -13px;
+        left: 7px;
+    }
+
+    .songInPlayed button:nth-of-type(2){
+        top: 13px;
+        left: -17px;
+    }
+
+
+
+    
+    
 }
 
 /* MOBILE XS VERSION */
 @media screen and (max-width: 552px) {
+    .aside {
+        background-color: red;
+    }
 }
