@@ -615,6 +615,10 @@ footer {
         padding: 10px 35px;
     }
 
+    .album ul li {
+        flex-basis: calc((100% - 200px) / 4);
+    }
+
     .imageContainer {
         width: calc((100vw - 200px) / 4 - 30px);
         height: calc((100vw - 200px) / 4 - 30px);
@@ -630,35 +634,67 @@ footer {
 
     .sectionViewAlbum p,
     .sectionViewAlbum h4 {
-        font-size: 0.7rem;  /**/
+        font-size: 0.7rem;
     }
 
     .songInPlayed,
     .controlHardware {
-        flex-basis: 200px;  /**/
+        flex-basis: 200px;
     }
 
     .songInPlayed button:nth-of-type(1) {
-        margin-right: -10px;  /**/
+        margin-right: -10px;
     }
 
     .artistPlaying {
-        margin-left: -9px;  /**/
+        margin-left: -9px;
     }
 
     .controlAudio {
         position: relative;
-        width: 80px;  /**/
-        margin: 0 13px;  /**/
+        width: 80px;
+        margin: 0 13px;
     }
 
     .controlHardware ul li button i {
-        font-size: 0.75rem;  /**/
+        font-size: 0.75rem;
     }
 }
-
+/* ----------------------------------------------------------- */
 /* MOBILE S VERSION */
-@media screen and (max-width: 639px) {}
+@media screen and (max-width: 639px) {
+    .areaUpdate a {
+        font-size: 0.65rem;
+        padding: 10px 25px;
+    }
+
+    .album ul{
+        margin: 0px;
+    }
+
+    .album ul li {
+        flex-basis: calc((100% - 200px) / 2);
+    }
+
+    .imageContainer {
+        width: calc((100vw - 200px) / 2 - 30px);
+        height: calc((100vw - 200px) / 2 - 30px);
+    }
+
+    .songInPlayed button:nth-of-type(1),
+    .songInPlayed button:nth-of-type(2) {
+        margin-right: -5px;
+    }
+
+    .controlHardware ul li button i {
+        font-size: 0.65rem;
+        margin: 0 4px;
+    }
+
+    .controlHardware {
+        justify-content: center;
+    }
+}
 
 /* MOBILE XS VERSION */
 @media screen and (max-width: 320px) {}
