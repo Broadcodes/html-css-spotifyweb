@@ -792,7 +792,7 @@ footer {
 /* MOBILE XS VERSION */
 @media screen and (max-width: 552px) {
     body{
-        min-width: 550px;
+        min-width: 495px;
     }
 
     .aside {
@@ -890,5 +890,4 @@ footer {
     .controlAudioBarScrollCircle {
         left: 5px;
     }
-
 }
