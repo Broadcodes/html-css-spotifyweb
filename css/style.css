@@ -140,6 +140,10 @@ main {
     overflow-y: hidden;
 }
 
+.aside ul:nth-of-type(2):hover::-webkit-scrollbar-track{
+    background: #000;
+}
+
 .aside ul:nth-of-type(2):hover {
     overflow-y: scroll;
     scrollbar-color: #fff #fff;
